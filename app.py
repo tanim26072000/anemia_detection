@@ -15,7 +15,7 @@ def hard_voting(models, input_data):
 # Load your trained model
 model1 = pickle.load(open('RandomForest.pkl', 'rb'))
 model2 = pickle.load(open('decisiontree.pkl', 'rb'))
-model3 = pickle.load(open('GaussianNb.pkl', 'rb'))
+model3 = pickle.load(open('GaussianNB.pkl', 'rb'))
 model4 = pickle.load(open('knn.pkl', 'rb'))
 model5 = pickle.load(open('XGBoost.pkl', 'rb'))
 if 'gender' not in st.session_state:
