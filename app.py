@@ -97,18 +97,17 @@ with st.form("user_input_form"):
             result = "You have anemia" if prediction[0] == 1 else "You do not have anemia"
             if prediction[0] == 1:  # Assuming 1 indicates anemia
                 result = "You have anemia"
-                st.markdown(f'prediction from {model_name[i]} classifier:<p class="prediction-result-positive">{result}</p>', unsafe_allow_html=True)
+                st.markdown(f'prediction from **{model_name[i]}** classifier:<p class="prediction-result-positive">{result}</p>', unsafe_allow_html=True)
             else:
                 result = "You do not have anemia"
-                st.markdown(f'prediction from {model_name[i]}:<p class="prediction-result-negative">{result}</p>', unsafe_allow_html=True)
-            # en_result += prediction[0]
+                st.markdown(f'prediction from **{model_name[i]}**:<p class="prediction-result-negative">{result}</p>', unsafe_allow_html=True)
         
         final_prediction = hard_voting(models, input_data)
         en_result = "You have anemia" if final_prediction == 1 else "You do not have anemia"
     
     # Display the result from hard voting ensemble
         if final_prediction == 1:  # Assuming 1 indicates anemia
-            st.markdown(f'prediction from Ensemble of all models above (hard voting): <p class="prediction-result-positive">{en_result}</p>', unsafe_allow_html=True)
+            st.markdown(f'prediction from Ensemble of all models above **(hard voting)**: <p class="prediction-result-positive">{en_result}</p>', unsafe_allow_html=True)
         else:
-            st.markdown(f'prediction from Ensemble of all models above (hard voting): <p class="prediction-result-negative">{en_result}</p>', unsafe_allow_html=True)
+            st.markdown(f'prediction from Ensemble of all models above **(hard voting)**: <p class="prediction-result-negative">{en_result}</p>', unsafe_allow_html=True)
 #to start the app, run 'streamlit run app.py' command on cmd
